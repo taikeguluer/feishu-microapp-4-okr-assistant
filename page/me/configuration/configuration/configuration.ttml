@@ -1,0 +1,118 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view class="row-section" data-element-type='kernelGroup'  bindtap="chooseChat">
+            <view>核心群：</view>
+            <view >{{configurations.groups.kernel.name}}</view>
+        </view>
+        <view  class="row-section" data-element-type='teamGroup' bindtap="chooseChat">
+            <view>团队群：</view>
+            <view >{{configurations.groups.team.name}}</view>
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="row-section" tt:for="{{configurations.teams}}">
+            <input id='{{index}}' data-element-type='subTeamName' bindblur='eventHandler' bindconfirm='eventHandler' value='{{item.name}}'/>
+            <view id='{{index}}' bindtap="chooseContact">{{item.leader_name==''?'请设置':item.leader_name}}</view>
+            <picker id='{{index}}' data-element-type='meeintg1on1Weekth' bindchange="eventHandler" value="{{item.meeting_1on1_weekth}}" range="{{weekth}}">
+                <view>
+                    {{item.meeting_1on1_weekth==''?'请设置':weekth[item.meeting_1on1_weekth]}}
+                </view>
+            </picker>
+            <picker id='{{index}}' data-element-type='meeintg1on1Weekday' bindchange="eventHandler" value="{{item.meeting_1on1_weekday}}" range="{{weekdays}}">
+                <view>
+                    {{item.meeting_1on1_weekday==''?'请设置':weekdays[item.meeting_1on1_weekday]}}
+                </view>
+            </picker>
+            <picker id='{{index}}' data-element-type='meeintg1on1Time' bindchange="eventHandler" mode="time" value="{{item.meeting_1on1_time}}">
+            <view>
+                {{item.meeting_1on1_time==''?'请设置':item.meeting_1on1_time}}
+            </view>
+            </picker>
+            <view id='{{index}}' data-element-type='deleteTeam' bindtap="eventHandler">删除</view>
+        </view>
+        <view data-element-type='addTeam' bindtap="eventHandler">添加</view>
+    </view>
+    <view  class="sub-section">
+        <view class="row-section">
+            <view>通知时间</view>
+            <view>材料完成时间</view>
+            <view>开会时间</view>
+            <view>消息模板</view>
+            <view>飞阅会材料模板</view>
+            <view>周会路径</view>
+        </view>
+        <view class="row-section" tt:for="{{configurations.schedules}}">
+            <picker id='{{index}}' mode="{{item.type == 'weekly'?'selector':'date'}}" data-element-type='notificationDate' bindchange="eventHandler" value="{{item.notification_date}}" range="{{weekdays}}">
+                <view>
+                    {{item.type == 'weekly'?weekdays[item.notification_date]:item.notification_date}}
+                </view>
+            </picker>
+            <picker id='{{index}}' mode="time" value="{{item.notification_time}}" data-element-type='notificationTime' bindchange="eventHandler">
+                <view>
+                    {{item.notification_time}}
+                </view>
+            </picker>
+            <picker id='{{index}}' mode="{{item.type == 'weekly'?'selector':'date'}}" data-element-type='readyDate' bindchange="eventHandler" value="{{item.ready_date}}" range="{{weekdays}}">
+                <view>
+                    {{item.type == 'weekly'?weekdays[item.ready_date]:item.ready_date}}
+                </view>
+            </picker>
+            <picker id='{{index}}' mode="time" value="{{item.ready_time}}" data-element-type='readyTime' bindchange="eventHandler">
+                <view>
+                    {{item.ready_time}}
+                </view>
+            </picker>
+            <picker id='{{index}}' mode="{{item.type == 'weekly'?'selector':'date'}}" data-element-type='startDate' bindchange="eventHandler" value="{{item.start_date}}" range="{{weekdays}}">
+                <view>
+                    {{item.type == 'weekly'?weekdays[item.start_date]:item.start_date}}
+                </view>
+            </picker>
+            <picker id='{{index}}' mode="time" value="{{item.start_time}}" data-element-type='startTime' bindchange="eventHandler">
+                <view>
+                    {{item.start_time}}
+                </view>
+            </picker>
+            <input id='{{index}}' data-element-type='kernelMessageTemplate' bindblur='eventHandler' bindconfirm='eventHandler' value='{{item.kernel_content}}'/>
+            <input id='{{index}}' data-element-type='teamMessageTemplate' hidden="{{item.type == 'weekly'}}" bindblur="{{item.type != 'weekly'?'eventHandler':''}}" bindconfirm="{{item.type != 'weekly'?'eventHandler':''}}" value="{{item.type != 'weekly'?item.team_content:'不适用'}}"/>
+            <view id='{{index}}' data-element-type='doc_template'  bindtap='openSchema'>{{item.doc_template.name}}</view>
+            <view id='{{index}}' data-element-type='doc_folder'  bindtap='openSchema'>{{item.doc_folder.name}}</view>           
+        </view>
+    </view>
+    <view  class="sub-section">
+        <view>周会取消日期</view>
+        <view class="row-section">
+            <view class="row-section" tt:for="{{configurations.cancelled_weekly_meetings}}" >
+                <picker id='{{index}}' mode="date" value="{{item.cancelled_notification_date}}" data-element-type='cwm' bindchange="eventHandler">
+                    <view>
+                        {{item.cancelled_notification_date!=''?item.cancelled_notification_date:'请设置'}}
+                    </view>
+                </picker>
+                <view id='{{index}}' data-element-type='deleteCWM' bindtap="eventHandler">删除</view>
+            </view>
+        </view>
+        <view data-element-type='addCWM' bindtap="eventHandler">添加</view>
+    </view>
+    <view  class="sub-section">
+        <view class="row-section">
+            <view>OKR文件夹</view>
+            <view data-element-type='okr_folder' bindtap='openSchema'>{{configurations.docs.okr_folder.name}}</view>
+        </view>
+        <view class="row-section">
+            <view>OKR模板</view>
+            <view data-element-type='okr_template' bindtap='openSchema'>{{configurations.docs.okr_template.name}}</view>
+        </view>
+        <view class="row-section">
+            <view>个人职业发展规划文件夹</view>
+            <view data-element-type='career_plan_folder' bindtap='openSchema'>{{configurations.docs.career_plan_folder.name}}</view>
+        </view>
+        <view class="row-section">
+            <view>个人职业发展规划模板</view>
+            <view data-element-type='career_plan_template' bindtap='openSchema'>{{configurations.docs.career_plan_template.name}}</view>
+        </view>
+    </view>
+    <view class="row-section">
+        <button type="default" size="mini" bindtap='restoreConf'>还原</button>
+        <button type="primary" size="mini" bindtap='submitConf'>提交</button>
+    </view>
+
+</view>

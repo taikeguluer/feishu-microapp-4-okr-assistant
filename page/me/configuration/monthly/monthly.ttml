@@ -1,0 +1,86 @@
+<view class="page-section">
+    <view class="sub-section" >
+        <view class="single-section" id="jan" bindtap="eventHandler" >
+            <view class="tool-info-with-content">1月会</view>
+            <view class="content-info">{{schedules.jan.start_date}} {{schedules.jan.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="feb" bindtap="eventHandler">
+            <view class="tool-info-with-content">2月会</view>
+            <view class="content-info">{{schedules.feb.start_date}} {{schedules.feb.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="mar" bindtap="eventHandler">
+            <view class="tool-info-with-content">1季度会</view>
+            <view class="content-info">{{schedules.mar.start_date}} {{schedules.mar.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="apr" bindtap="eventHandler">
+            <view class="tool-info-with-content">4月会</view>
+            <view class="content-info">{{schedules.apr.start_date}} {{schedules.apr.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="may" bindtap="eventHandler">
+            <view class="tool-info-with-content">5月会</view>
+            <view class="content-info">{{schedules.may.start_date}} {{schedules.may.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="jun" bindtap="eventHandler">
+            <view class="tool-info-with-content">半年会</view>
+            <view class="content-info">{{schedules.jun.start_date}} {{schedules.jun.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="jul" bindtap="eventHandler">
+            <view class="tool-info-with-content">7月会</view>
+            <view class="content-info">{{schedules.jul.start_date}} {{schedules.jul.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="aug" bindtap="eventHandler">
+            <view class="tool-info-with-content">8月会</view>
+            <view class="content-info">{{schedules.aug.start_date}} {{schedules.aug.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="sep" bindtap="eventHandler">
+            <view class="tool-info-with-content">3季度会</view>
+            <view class="content-info">{{schedules.sep.start_date}} {{schedules.sep.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="oct" bindtap="eventHandler">
+            <view class="tool-info-with-content">10月会</view>
+            <view class="content-info">{{schedules.oct.start_date}} {{schedules.oct.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="nov" bindtap="eventHandler">
+            <view class="tool-info-with-content">11月会</view>
+            <view class="content-info">{{schedules.nov.start_date}} {{schedules.nov.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="dec" bindtap="eventHandler">
+            <view class="tool-info-with-content">年会</view>
+            <view class="content-info">{{schedules.dec.start_date}} {{schedules.dec.start_time}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+</view>

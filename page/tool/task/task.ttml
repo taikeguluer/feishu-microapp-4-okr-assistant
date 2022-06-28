@@ -1,0 +1,50 @@
+<view class="page-section">
+    <view class="btn-section">
+            <button class="left-btn" type="default" size="mini">取消</button>
+            <button class="right-btn" type="primary" size="mini">提交</button>
+    </view>
+    <view class="sub-section" bindtap="setTask">
+        <view class="single-section">
+            <view class="tool-info-with-content">消息群组</view>
+            <view class="content-info">数据与技术团队核心</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" bindtap="setTask">
+        <view class="single-section">
+            <view class="tool-info">销项</view>
+            <switch checked bindchange="switch1Change" class="small-switch" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section">
+            <view class="tool-info-with-content">任务截至时间</view>
+            <view class="content-info">2022-02-02 08:30</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" bindtap="setTask">
+        <view class="single-section">
+            <view class="tool-info-with-content">@列表</view>
+            <view class="content-info">王雷(wanglei0), ...</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <view class="tool-info">单独发送消息</view>
+            <switch checked bindchange="switch1Change" class="small-switch" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <view class="tool-info">个人职业发展规划</view>
+            <switch checked bindchange="switch1Change" class="small-switch" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <textarea maxlength=-1 auto-height placeholder="请输入具体任务内容"/>
+        </view>
+    </view>
+</view>

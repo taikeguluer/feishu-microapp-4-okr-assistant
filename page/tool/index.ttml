@@ -1,0 +1,33 @@
+<view class="page-section">
+    <view class="sub-section" bindtap="setTask">
+        <view class="tool-info">布置销项任务</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" bindtap="setCanlendar">
+        <view class="tool-info">初始日历日程</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" bindtap="remindBadTask">
+        <view class="tool-info">逾期销项提醒</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" bindtap="evalAnalysis">
+        <view class="tool-info">团队评价分析</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" bindtap="evalAnalysis">
+        <view class="tool-info">360绩效评估</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" bindtap="evalAnalysis">
+        <view class="tool-info">周报月报转发</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view hidden=true class="sub-section" bindtap="toolHandler">
+        <view class="tool-info">
+            <view>工具名称</view>
+            <view class="tool-intro">工具的简介</view>
+        </view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+</view>

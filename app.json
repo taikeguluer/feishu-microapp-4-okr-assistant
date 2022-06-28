@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "page/activation",
+    "page/me/index",
+    "page/me/configuration/index",
+    "page/me/configuration/configuration/configuration",
+    "page/me/configuration/group/group",
+    "page/me/configuration/team/team",
+    "page/me/configuration/team/teamdetail/teamdetail",
+    "page/me/configuration/weekly/weekly",
+    "page/me/configuration/weekly/cancelled/cancelled",
+    "page/me/configuration/monthly/monthly",
+    "page/me/configuration/monthly/monthlydetail/monthlydetail",
+    "page/tool/index",
+    "page/tool/task/task",
+    "page/tool/tool/tool",
+    "page/tool/complain/complain"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "OKR助理",
+    "navigationBarBackgroundColor": "#f1f2f4",
+    "backgroundColor": "#f1f2f4"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3370FF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/tool/index",
+        "iconPath": "image/tool.png",
+        "selectedIconPath": "image/tool_HL.png",
+        "text": "工具"
+      },
+      {
+        "pagePath": "page/me/index",
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/me_HL.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "ext": {
+    "defaultPages": {
+      "sidebarMode": "page/activation",
+      "PCMode": "page/activation"
+    }
+  }
+}

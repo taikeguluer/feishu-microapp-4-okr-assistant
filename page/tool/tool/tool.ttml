@@ -1,0 +1,36 @@
+<view class="page-section">
+    <radio-group class="row-section sub-section" bindchange="groupChange">
+        <label><radio value="kernel" checked="true"/>核心群</label>
+        <label><radio value="team"/>团队群</label>
+    </radio-group>
+    <checkbox-group bindchange="singleChatChange"  class="row-section sub-section">    
+        <label><checkbox value="singleChat"/>逐一发送消息</label>
+    </checkbox-group>
+
+    <checkbox-group bindchange="isCPChange"  class="row-section sub-section">    
+        <label><checkbox value="careerPlan"/>制定个人职业发展规划</label>
+    </checkbox-group>
+    <checkbox-group bindchange="hasTaskChange"  class="row-section sub-section">    
+        <label><checkbox value="hasTask"/>创建销项</label>
+    </checkbox-group>
+    <view hidden="{{!hasTask}}" class="row-section sub-section">
+        <picker mode="date" value="{{taskDate}}" bindchange="taskDateChange">
+            <view>
+                {{taskDate}}
+            </view>
+        </picker>
+        <picker mode="time" value="{{taskTime}}" bindchange="taskTimeChange">
+            <view>
+                {{taskTime}}            
+            </view>
+        </picker>
+    </view>
+    <view class="row-section sub-section" bindtap="chooseContacts">      
+        <view>选择at人员</view>
+        <view tt:for="{{contacts}}">
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <input bindblur='contentChange' bindconfirm='contentChange' value='{{content}}'/>
+</view>
+<button bindtap="submitMes" type="primary" size="large ">提交</button>

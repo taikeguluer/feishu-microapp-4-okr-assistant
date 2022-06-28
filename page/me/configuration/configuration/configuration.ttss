@@ -1,0 +1,15 @@
+.page-section {
+  display:flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.sub-section {
+  border: #436ff4 2px solid;
+}
+
+.row-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+

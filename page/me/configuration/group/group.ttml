@@ -1,0 +1,16 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view class="single-section" id="kernel"  bindtap="eventHandler" >
+            <view class="tool-info">核心群</view>
+            <view class="content-info">{{groups.kernel.name}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="team"  bindtap="eventHandler" >
+            <view class="tool-info">团队群</view>
+            <view class="content-info">{{groups.team.name}}</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+</view>

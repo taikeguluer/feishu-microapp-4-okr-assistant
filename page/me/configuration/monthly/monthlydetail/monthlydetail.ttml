@@ -1,0 +1,81 @@
+<view class="page-section">
+    <view class="sub-section" >
+        <view class="single-section">
+            <view class="tool-info-with-content">会议通知时间</view>
+            <view class="time-pickers">
+                <picker id='notification_time' bindchange="eventHandler" mode="time" value="{{schedule.notification_time}}">
+                    <view>
+                        {{schedule.notification_time==''?'??:??':schedule.notification_time}}
+                    </view>
+                </picker>
+                <view class="blank-line"></view>
+                <picker id='notification_date' bindchange="eventHandler" mode="date" value="{{schedule.notification_date}}">
+                    <view>
+                        {{schedule.notification_date==''?'??:??:??':schedule.notification_date}}
+                    </view>
+                </picker>
+            </view>
+            <image class="enter-img" src="../../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section">
+            <view class="tool-info-with-content">报告完成时间</view>
+            <view class="time-pickers">
+                <picker id='ready_time' bindchange="eventHandler" mode="time" value="{{schedule.ready_time}}">
+                    <view>
+                        {{schedule.ready_time==''?'??:??':schedule.ready_time}}
+                    </view>
+                </picker>
+                <view class="blank-line"></view>
+                <picker id='ready_date' bindchange="eventHandler" mode="date" value="{{schedule.ready_date}}">
+                    <view>
+                        {{schedule.ready_date==''?'??:??:??':schedule.ready_date}}
+                    </view>
+                </picker>
+            </view>
+            <image class="enter-img" src="../../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section">
+            <view class="tool-info-with-content">会议召开时间</view>
+            <view class="time-pickers">
+                <picker id='start_time' bindchange="eventHandler" mode="time" value="{{schedule.start_time}}">
+                    <view>
+                        {{schedule.start_time==''?'??:??':schedule.start_time}}
+                    </view>
+                </picker>
+                <view class="blank-line"></view>
+                <picker id='start_date' bindchange="eventHandler" mode="date" value="{{schedule.start_date}}">
+                    <view>
+                        {{schedule.start_date==''?'??:??:??':schedule.start_date}}
+                    </view>
+                </picker>
+            </view>
+            <image class="enter-img" src="../../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section" id="doc_template"  bindtap="eventHandler">
+            <view class="tool-info">月报模板</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="doc_folder"  bindtap="eventHandler">
+            <view class="tool-info">月报文件目录</view>
+            <image class="enter-img" src="../../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <textarea id="kernel_content"  bindblur="eventHandler" maxlength=-1 auto-height value="{{schedule.kernel_content}}"/>
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <textarea id="team_content"  bindblur="eventHandler" maxlength=-1 auto-height value="{{schedule.team_content}}"/>
+        </view>
+    </view>
+</view>

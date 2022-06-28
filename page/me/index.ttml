@@ -1,0 +1,23 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view>
+            <image class="avatar-img" src="{{userInfo.avatar.avatar_240}}" />
+        </view>
+        <view>
+            <view class="user-name">{{userName}}</view>
+            <view class="user-title">{{jobTitle}}</view>
+            <view class="user-org">{{userInfo.dep_info.name}}</view>
+        </view>
+    </view>
+    <view class="sub-section" id="goConf"  bindtap="eventHandler">
+        <view class="tool-info" >设置</view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+    <view class="sub-section" id="cancelAccount"  bindtap="eventHandler" >
+        <view class="tool-info">
+            <view class="kill-tool">账号注销</view>
+            <view class="tool-intro">永久性注销您的OKR助理，注销成功后该账号将无法使用，账号下的所有设置数据将被删除，但是用过程中生成的云文档、日程、消息、任务等飞书数据将继续保留</view>
+        </view>
+        <image class="enter-img" src="../../image/enter.png" />
+    </view>
+</view>

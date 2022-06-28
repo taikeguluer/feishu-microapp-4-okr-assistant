@@ -1,0 +1,29 @@
+<view class="page-section">
+    <view tt:if="{{isLogin}}">
+        <view hidden={{introDisplay}}>正在为您检查账号激活状态，请稍候...</view>
+        <view class="sub-section">
+            <view><image hidden={{!introDisplay}} class="avatar-img" src="{{robotInfo.avatar_url}}"/></view>
+            <view hidden={{!introDisplay}} class="message-section opposite-message">{{lastName}}总，您好，我是您的个人助理，我可以帮您落实团队OKR管理，通过自动化使用云文档、任务、日程、群组、文本消息、卡片消息，结合飞阅会方法、销项管理方法、OKR/个人职业规划模板和示例、1on1会议方法，完成OKR制定、周/月/季/半年/年跟踪和评价、个人职业规划制定、核心团队定期1on1沟通、日常工作销项，最终帮您赋能团队向着一致的目标高效前进。您有兴趣的话，我把激活我的消息卡片发给您？</view>
+        </view>
+        <view class="sub-section">
+            <view><image hidden={{!directorReplyDisplay}} class="avatar-img" src="{{userInfo.avatar.avatar_72}}"/></view>
+            <view hidden={{!directorReplyDisplay}} class="message-section my-message">听起来不错，发我试试看吧</view>
+        </view>
+        <view class="sub-section">
+            <view><image hidden={{!cardMesDisplay}} class="avatar-img" src="{{robotInfo.avatar_url}}"/></view>
+            <view hidden={{!cardMesDisplay}} class="message-section card-message">
+                <view hidden={{!cardMesDisplay}}  class="first-line-in-card">OKR助理 邀您激活团队OKR管理</view>
+                <view  class="second-line-in-card">
+                    <checkbox-group bindchange="authAgreementChange">    
+                        <checkbox hidden={{!cardMesDisplay}}  class="small-check-box" value="authAgreement"/>
+                    </checkbox-group>
+                    <view hidden={{!cardMesDisplay}}>我知晓并同意：激活后，OKR助理访问飞书数据，但仅存储配置信息。</view>
+                </view>
+                <view hidden={{!cardMesDisplay||!authAgreement}} bindtap="activateUser"  class="third-line-in-card"> 激活OKR助理</view>
+                <view hidden={{!cardMesDisplay}} class="fouth-line-in-card"></view>
+                <view hidden={{!cardMesDisplay}} class="fifth-line-in-card">我不需要助理，我只是<view bindtap="justComplain" class="right_in_fifth-line-in-card">有事儿找组织</view></view>
+            </view>
+        </view>
+    </view>
+    <view tt:else bindtap="toLogin">飞书账号登录中...</view>
+</view>

@@ -1,0 +1,23 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view tt:for="{{cancelledWeeklyMeetings}}">
+            <view hidden="{{!index}}" class="line-section">
+            </view>
+            <view class="single-section">
+                <image id='{{index}}' data-element-type='deleteCWM' bindtap="eventHandler" class="delete-img" src="../../../../../image/delete.png" />
+                <view class="tool-info">
+                    <picker id='{{index}}' mode="date" value="{{item.cancelled_notification_date}}"
+                        data-element-type='cwm' bindchange="eventHandler">
+                        <view>
+                            {{item.cancelled_notification_date!=''?item.cancelled_notification_date:'????-??-??'}}
+                        </view>
+                    </picker>
+                </view>
+                <image class="enter-img" src="../../../../../image/enter.png" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="fixed-add-button">
+    <image data-element-type='addCWM' bindtap="eventHandler" class="add-img" src="../../../../../image/add.png" />
+</view>

@@ -1,0 +1,42 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view class="single-section">
+            <input id='subTeamName' bindblur='eventHandler' bindconfirm='eventHandler' value={{team.name}} />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section" id='leader' bindtap="eventHandler">
+            <view class="tool-info-with-content">团队负责人</view>
+            <view class="content-info">{{team.leader_name}}</view>
+            <image class="enter-img" src="../../../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section">
+            <view class="tool-info-with-content">月度1on1</view>
+            <view class="time-pickers">
+                <picker id='meeintg1on1Time' bindchange="eventHandler" mode="time"
+                    value="{{team.meeting_1on1_time}}">
+                    <view>
+                        {{team.meeting_1on1_time==''?'??:??':team.meeting_1on1_time}}
+                    </view>
+                </picker>
+                <view class="blank-line"></view>
+                <picker id='meeintg1on1Weekday' bindchange="eventHandler"
+                    value="{{team.meeting_1on1_weekday}}" range="{{weekdays}}">
+                    <view>
+                        {{team.meeting_1on1_weekday==''?'周?':weekdays[team.meeting_1on1_weekday]}}
+                    </view>
+                </picker>
+                <view class="blank-line"></view>
+                <picker id='meeintg1on1Weekth' bindchange="eventHandler"
+                    value="{{team.meeting_1on1_weekth}}" range="{{weekth}}">
+                    <view>
+                        {{team.meeting_1on1_weekth==''?'第?个':weekth[team.meeting_1on1_weekth]}}
+                    </view>
+                </picker>
+            </view>
+            <image class="enter-img" src="../../../../../image/enter.png" />
+        </view>
+    </view>
+</view>

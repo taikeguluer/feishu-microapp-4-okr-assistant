@@ -1,0 +1,68 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view class="single-section">
+            <view class="tool-info">多管理层级</view>
+            <switch disabled checked bindchange="switch1Change" class="small-switch" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section"  id="goGroup"  bindtap="eventHandler" >
+            <view class="tool-info">消息群组</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="goTeam"  bindtap="eventHandler">
+            <view class="tool-info">团队</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section" id="goWeekly"  bindtap="eventHandler">
+            <view class="tool-info">周会</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="goMonthly"  bindtap="eventHandler">
+            <view class="tool-info">月会</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section" id="techExpert"  bindtap="eventHandler">
+            <view class="tool-info">技术专家评选</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section" id="techExpert"  bindtap="eventHandler">
+            <view class="tool-info">岗位职级能力要求</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="career_plan_template"  bindtap="eventHandler">
+            <view class="tool-info">个人职业发展规划模板</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="career_plan_folder"  bindtap="eventHandler">
+            <view class="tool-info">个人职业发展规划文件目录</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section" >
+        <view class="single-section" id="okr_template"  bindtap="eventHandler">
+            <view class="tool-info">OKR模板</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+        <view class="line-section">
+        </view>
+        <view class="single-section" id="okr_folder"  bindtap="eventHandler">
+            <view class="tool-info">OKR文件目录</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+</view>

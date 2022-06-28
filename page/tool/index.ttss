@@ -1,0 +1,29 @@
+.page-section {
+  color: #222328;
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.sub-section {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.tool-info {
+  width: 92%;
+}
+.enter-img {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+}
+.kill-tool {
+  color: red;
+}
+.tool-intro {
+  color: #8f959d;
+}

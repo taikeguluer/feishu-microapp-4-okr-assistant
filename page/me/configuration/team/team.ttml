@@ -1,0 +1,17 @@
+<view class="page-section">
+    <view class="sub-section">
+        <view tt:for="{{teams}}">
+            <view hidden={{!index}} class="line-section"></view>
+            <view class="single-section">
+                <image class="delete-img" id='{{index}}' data-element-type='delItem' bindtap="eventHandler"
+                    src="../../../../image/delete.png" />
+                <view class="tool-info-with-content" id='{{index}}' data-element-type='goDetail' bindtap="eventHandler">{{item.name}}</view>
+                <view class="content-info" id='{{index}}' data-element-type='goDetail' bindtap="eventHandler">{{item.leader_name}}</view>
+                <image class="enter-img" src="../../../../image/enter.png" id='{{index}}' data-element-type='goDetail' bindtap="eventHandler" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="fixed-add-button">
+    <image class="add-img" src="../../../../image/add.png" data-element-type='addItem' bindtap="eventHandler" />
+</view>

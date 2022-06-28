@@ -1,0 +1,18 @@
+<view class="page-section">
+    <view class="btn-section">
+            <button id="cancelledBtn"  bindtap="eventHandler" class="left-btn" type="default" size="mini">取消</button>
+            <button id="submitBtn"  bindtap="eventHandler" class="right-btn" type="primary" size="mini">提交</button>
+    </view>
+    <view id="chooseChat"  bindtap="eventHandler" class="sub-section">
+        <view class="single-section">
+            <view class="tool-info">组织</view>
+            <view class="content-info">{{orgInfo.name}}</view>
+            <image class="enter-img" src="../../../image/enter.png" />
+        </view>
+    </view>
+    <view class="sub-section">
+        <view class="single-section">
+            <textarea id="contentChange"  bindblur="eventHandler" maxlength=-1 auto-height placeholder="请输入具体是啥事儿"/>
+        </view>
+    </view>
+</view>

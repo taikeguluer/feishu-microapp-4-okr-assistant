@@ -1,0 +1,81 @@
+.page-section {
+  background-color: #ffffff;
+  color: #222328;
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  margin-bottom: 25px;
+}
+
+.avatar-img {
+  margin-right: 7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.message-section {
+  border-radius: 10px;
+  padding: 12px;
+  margin-right: 28px;
+}
+
+.opposite-message {
+  background-color: #f2f3f5;
+}
+
+.my-message {
+  background-color: #d4e2fc;
+}
+
+.card-message {
+  border: #dedede 1.4px solid;
+}
+
+.first-line-in-card {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.second-line-in-card {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  margin-bottom: 15px;
+  color: #8F959E;
+  font-size: 11px;
+}
+.small-check-box {
+  zoom: 50%;
+  margin-right: 5px;
+}
+.third-line-in-card {
+  border: #dedede 1.4px solid;
+  text-align: center;
+  border-radius: 7px;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+.fouth-line-in-card {
+  border-top: #dedede 1px solid;
+  margin-bottom: 10px;
+}
+.fifth-line-in-card {
+  display: flex;
+  flex-direction: row;
+  color: #8F959E;
+  text-align: left;
+  font-size: 12px;
+}
+
+.right_in_fifth-line-in-card {
+  color: #325cbe
+}

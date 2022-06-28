@@ -1,0 +1,89 @@
+.page-section {
+  color: #222328;
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.sub-section {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.single-section {
+  display: flex;
+  flex-direction: row;
+
+}
+.line-section {
+  border-top: #dedede 1px solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.avatar-img {
+  margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.user-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px; 
+  margin-bottom: 7px;
+}
+
+.user-title {
+  color: #8f959d;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+.user-org {
+  font-weight: bold;
+  color: #8f959d;
+}
+.tool-info-with-content {
+  width: 42%;
+}
+.tool-info {
+  width: 92%;
+}
+.content-info {
+  width: 50%;
+  color: #8f959d;
+  text-align: right;
+  font-size: 12px;
+}
+.enter-img {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.add-img {
+  width: 50px;
+  height: 50px;
+}
+.delete-img {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.kill-tool {
+  color: red;
+}
+.tool-intro {
+  color: #8f959d;
+}
+.fixed-add-button {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}

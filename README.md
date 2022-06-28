@@ -1,0 +1,2 @@
+# OKR助理 —— 以OKR制定/跟踪/评价为核心的团队管理工具
+代码库详情请参见对应后端服务代码库：[https://github.com/taikeguluer/python-service-4-okr-assistant/blob/master/README.md](https://github.com/taikeguluer/python-service-4-okr-assistant/blob/master/README.md)

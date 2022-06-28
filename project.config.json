@@ -1,0 +1,14 @@
+{
+	"description": "project configuration file.",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "cli_a22ed44fe138500c",
+	"projectname": "okr-assistant"
+}
